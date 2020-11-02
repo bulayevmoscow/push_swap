@@ -5,3 +5,9 @@
 a.out
 .idea/
 .vscode/
+.DS_Store
+CMakeLists.txt
+checker
+cmake-build-debug/
+push_swap
+test.sh

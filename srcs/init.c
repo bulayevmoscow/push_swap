@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/02 19:37:34 by kupsyloc          #+#    #+#             */
+/*   Updated: 2020/11/02 19:45:14 by kupsyloc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-void				stack_free(t_stacks *stacks)
+void		stack_free(t_stacks *stacks)
 {
 	t_node	*temp;
 	int		i;
@@ -21,9 +33,9 @@ void				stack_free(t_stacks *stacks)
 	free(stacks->stack[B]);
 }
 
-void			stack_push(t_stack *stack, int data)
+void		stack_push(t_stack *stack, int data)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	if (!(tmp = (t_node*)malloc(sizeof(t_node))))
 		exit(1);
@@ -40,7 +52,7 @@ void			stack_push(t_stack *stack, int data)
 
 t_stack		*stack_create(char tower)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!(tmp = (t_stack*)malloc(sizeof(t_stack))))
 		exit(1);
@@ -73,7 +85,7 @@ int			stacks_init(t_stacks *stacks, char **av)
 	int		err;
 
 	str = fill_args(av);
-	if (!fill_args(av)[0])
+	if (!str)
 		return (1);
 	if ((err = check_args_err(str)))
 		return (err);

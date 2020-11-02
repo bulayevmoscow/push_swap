@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/02 19:37:39 by kupsyloc          #+#    #+#             */
+/*   Updated: 2020/11/02 19:38:29 by kupsyloc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int		main(int argc, char *argv[])
@@ -11,7 +23,6 @@ int		main(int argc, char *argv[])
 		(p_err(1));
 		return (1);
 	}
-
 	if ((err = stacks_init(&stacks, argv + 1)))
 	{
 		p_err(err);

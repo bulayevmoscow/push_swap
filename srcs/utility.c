@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utility.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/02 19:37:55 by kupsyloc          #+#    #+#             */
+/*   Updated: 2020/11/02 19:52:07 by kupsyloc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	p_err(int err)
 {
 	if (err)
-		ft_printf("Error\n");
+		ft_putstr_fd("Error\n", 2);
 }
 
 void	p_op(t_stacks *stack, const char *str, char tower)

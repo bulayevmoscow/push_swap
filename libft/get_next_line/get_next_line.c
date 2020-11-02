@@ -6,13 +6,13 @@
 /*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 22:23:53 by kupsyloc          #+#    #+#             */
-/*   Updated: 2020/11/02 18:49:27 by kupsyloc         ###   ########.fr       */
+/*   Updated: 2020/11/02 19:48:29 by kupsyloc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		gnl_check(char **str, char **ln)
+int				gnl_check(char **str, char **ln)
 {
 	int		i;
 	char	*tmp;
@@ -31,7 +31,7 @@ int		gnl_check(char **str, char **ln)
 	return (1);
 }
 
-int		gnl_read(int fd, char **str, char *tmp, char **ln)
+int				gnl_read(int fd, char **str, char *tmp, char **ln)
 {
 	int		i;
 	char	*tmp_str;

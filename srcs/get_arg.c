@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_arg.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/02 19:37:31 by kupsyloc          #+#    #+#             */
+/*   Updated: 2020/11/02 19:42:53 by kupsyloc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int			args_len(char **arg)
@@ -12,9 +24,9 @@ int			args_len(char **arg)
 	return (i);
 }
 
-void	args_free(char **str)
+void		args_free(char **str)
 {
-	int	i;
+	int		i;
 
 	i = -1;
 	while (str[++i])
@@ -22,7 +34,7 @@ void	args_free(char **str)
 	free(str);
 }
 
-char	**add_args(char *av, char **arg)
+char		**add_args(char *av, char **arg)
 {
 	char	**str;
 	char	**tmp;
@@ -46,7 +58,6 @@ char	**add_args(char *av, char **arg)
 	free(str);
 	return (tmp);
 }
-
 
 char		**fill_args(char **av)
 {

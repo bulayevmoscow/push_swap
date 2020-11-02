@@ -1,16 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kupsyloc <kupsyloc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/02 19:37:28 by kupsyloc          #+#    #+#             */
+/*   Updated: 2020/11/02 19:51:39 by kupsyloc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-int		check_validation(char *str, int (*f)(const char *, const char *))
+int			check_validation(char *str, int (*f)(const char *, const char *))
 {
-	if (!f(str, "pa") || !f(str, "pb") || !f(str, "sa") ||
-		!f(str, "sb") || !f(str, "ra") || !f(str, "rb") ||
-		!f(str, "rra") || !f(str, "rrb") ||!f(str, "ss") ||
-		!f(str, "rr") || !f(str, "rrr"))
+	if (!f(str, "pa") || !f(str, "pb") ||
+		!f(str, "sa") || !f(str, "sb") ||
+		!f(str, "ra") || !f(str, "rb") ||
+		!f(str, "rra") || !f(str, "rrb") ||
+		!f(str, "ss") || !f(str, "rr") ||
+		!f(str, "rrr"))
 		return (1);
 	return (0);
 }
 
-void	check_do(t_stack *a, t_stack *b, t_stacks *stack, \
+void		check_do(t_stack *a, t_stack *b, t_stacks *stack, \
 						char *operation)
 {
 	!ft_strcmp("pb", operation) ? o_p(a, b, stack) : 0;
@@ -26,7 +40,7 @@ void	check_do(t_stack *a, t_stack *b, t_stacks *stack, \
 	!ft_strcmp("rrr", operation) ? o_double(stack, operation, o_rr) : 0;
 }
 
-int		check(t_stack *a, t_stack *b, t_stacks *stacks)
+int			check(t_stack *a, t_stack *b, t_stacks *stacks)
 {
 	char	*operation;
 
@@ -61,7 +75,7 @@ int			main(int ac, char **av)
 		if (stack_is_sort(stack.stack[A]) && !stack.stack[1]->first)
 			ft_putstr_fd("OK\n", 1);
 		else
-			ft_putstr_fd("KO\n", 2);
+			ft_putstr_fd("KO\n", 1);
 	}
 	stack_free(&stack);
 	return (0);
