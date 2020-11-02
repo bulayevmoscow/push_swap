@@ -10,14 +10,20 @@ LFT_DIR := ./libft/
 OBJ_DIR	:= ./obj/
 
 # Source files
-FILE	:=  srcs/validation.c srcs/init.c srcs/operations.c srcs/get_arg.c srcs/utility.c srcs/sort.c srcs/quicksort.c
+FILE	:= 	sourse/additional.c sourse/do.c \
+			sourse/s.c sourse/qs.c\
+			sourse/args.c sourse/creator.c \
+			sourse/isvalid.c 
+FILE_PS :=	sourse/push_swap.c
+FILE_CH :=	sourse/checker.c
+
 SRCS	+= $(notdir $(FILE))
 HEADER	:= includes/*.h
 
 # Object files
 OBJF	:= $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
-vpath %.c srcs/
+vpath %.c sourse/
 
 RED 	:= \033[31;1m
 GREEN 	:= \033[32;1m
@@ -28,11 +34,11 @@ EOC		:= \033[00m
 all: $(TARG_PS) $(TARG_CH)
 
 $(TARG_PS): obj $(LIBFT) $(OBJF)
-	@$(CC) $(OBJF) $(LIBFT) -o $@ srcs/push_swap.c
+	@$(CC) $(OBJF) $(LIBFT) -o $@ $(FILE_PS)
 	@printf "\n$(GREEN)compiled: $(WHITE)$(TARG_PS)$(EOC)\n"
 
 $(TARG_CH): obj $(LIBFT) $(OBJF)
-	@$(CC) $(OBJF) $(LIBFT) -o $@ srcs/checker.c
+	@$(CC) $(OBJF) $(LIBFT) -o $@ $(FILE_CH)
 	@printf "\n$(GREEN)compiled: $(WHITE)$(TARG_CH)$(EOC)\n"
 
 obj:
