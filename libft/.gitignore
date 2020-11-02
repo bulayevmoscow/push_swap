@@ -1,0 +1,5 @@
+*.a
+*.o
+*.gch
+.DS_Store/
+main.c

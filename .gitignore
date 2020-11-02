@@ -1,0 +1,7 @@
+*.a
+*.o
+*.gch
+.DS_Store/
+a.out
+.idea/
+.vscode/
